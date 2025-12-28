@@ -18,7 +18,7 @@ public class AppLauncher extends Application {
     View view = new View(controller, game, stage);
     game.addObserver(view);
 
-    Scene scene = new Scene(view.render(), 600, 600);
+    Scene scene = new Scene(view.render(), 700, 850);
     scene.getStylesheets().add("pacman.css");
     stage.setScene(scene);
     stage.setResizable(false);

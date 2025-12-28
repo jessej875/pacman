@@ -39,6 +39,13 @@ public class Game implements Subject {
     startLevel();
   }
 
+  public void returnToMenu() {
+    isPlaying = false;
+    isGameOver = false;
+    isLevelComplete = false;
+    notifyObservers();
+  }
+
   private void startLevel() {
     maze = new Maze(level);
     pacman = new Pacman(1, 1);
@@ -78,7 +85,7 @@ public class Game implements Subject {
         maze.eatDot(newRow, newCol);
         score += 10;
 
-        if (maze.allDotsEaten()) {
+        if (maze.getDotsEatenPercentage() >= 60.0) {
           isLevelComplete = true;
           isPlaying = false;
           if (score > highScore) {

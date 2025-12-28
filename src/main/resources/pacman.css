@@ -124,20 +124,30 @@
 
 .next-level-button {
     -fx-background-color: green;
-        -fx-text-fill: white;
-        -fx-font-family: "Arial";
-        -fx-font-size: 24px;
-        -fx-font-weight: bold;
-        -fx-padding: 15px 40px;
-        -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 35px;
+    -fx-background-radius: 10px;
 }
 
 .new-game-button {
     -fx-background-color: red;
     -fx-text-fill: white;
     -fx-font-family: "Arial";
-    -fx-font-size: 24px;
+    -fx-font-size: 20px;
     -fx-font-weight: bold;
-    -fx-padding: 15px 40px;
+    -fx-padding: 12px 35px;
+    -fx-background-radius: 10px;
+}
+
+.return-menu-button {
+    -fx-background-color: grey;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 35px;
     -fx-background-radius: 10px;
 }

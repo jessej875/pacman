@@ -12,4 +12,6 @@ public interface Controller {
   void startGame();
 
   void nextLevel();
+
+  void returnToMenu();
 }

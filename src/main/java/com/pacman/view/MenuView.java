@@ -38,7 +38,7 @@ public class MenuView implements FXComponent {
     Label instructions = new Label("Use WASD to Move");
     instructions.getStyleClass().add("instructions");
 
-    Label goal = new Label("Eat all dots and avoid ghosts!");
+    Label goal = new Label("Eat 60% of the white dots and avoid the ghosts!");
     goal.getStyleClass().add("goal");
 
     vBox.getChildren().addAll(title, highScoreLabel, startButton, instructions, goal);

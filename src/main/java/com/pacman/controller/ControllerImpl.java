@@ -38,4 +38,9 @@ public class ControllerImpl implements Controller {
   public void nextLevel() {
     game.nextLevel();
   }
+
+  @Override
+  public void returnToMenu() {
+    game.returnToMenu();
+  }
 }

@@ -90,22 +90,26 @@ public class GameView implements FXComponent {
     newGameButton.getStyleClass().add("new-game-button");
     newGameButton.setOnAction(e -> controller.startGame());
 
-    bottomSection.getChildren().add(newGameButton);
+    Button returnToMenuButton = new Button("Return to Menu");
+    returnToMenuButton.getStyleClass().add("return-menu-button");
+    returnToMenuButton.setOnAction(e -> controller.returnToMenu());
+
+    bottomSection.getChildren().addAll(newGameButton, returnToMenuButton);
 
     root.getChildren().addAll(topSection, board, bottomSection);
 
     root.setOnKeyPressed(
-            e -> {
-              if (e.getCode() == KeyCode.W) {
-                controller.moveUp();
-              } else if (e.getCode() == KeyCode.S) {
-                controller.moveDown();
-              } else if (e.getCode() == KeyCode.A) {
-                controller.moveLeft();
-              } else if (e.getCode() == KeyCode.D) {
-                controller.moveRight();
-              }
-            });
+        e -> {
+          if (e.getCode() == KeyCode.W) {
+            controller.moveUp();
+          } else if (e.getCode() == KeyCode.S) {
+            controller.moveDown();
+          } else if (e.getCode() == KeyCode.A) {
+            controller.moveLeft();
+          } else if (e.getCode() == KeyCode.D) {
+            controller.moveRight();
+          }
+        });
 
     root.setFocusTraversable(true);
     root.requestFocus();

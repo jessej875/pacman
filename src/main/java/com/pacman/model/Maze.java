@@ -165,7 +165,11 @@ public class Maze {
     return dotsRemaining;
   }
 
-  public boolean allDotsEaten() {
-    return dotsRemaining == 0;
+  public double getDotsEatenPercentage() {
+    if (totalDots == 0) {
+      return 0.0;
+    }
+    int dotsEaten = totalDots - dotsRemaining;
+    return (dotsEaten * 100.0) / totalDots;
   }
 }
