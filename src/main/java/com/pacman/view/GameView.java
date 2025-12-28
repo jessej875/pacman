@@ -4,13 +4,13 @@ import com.pacman.controller.Controller;
 import com.pacman.model.Game;
 import com.pacman.model.Ghost;
 import com.pacman.model.Maze;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -30,14 +30,12 @@ public class GameView implements FXComponent {
 
   @Override
   public Parent render() {
-    BorderPane root = new BorderPane();
+    VBox root = new VBox();
     root.getStyleClass().add("game-view");
+    root.setAlignment(Pos.CENTER);
 
     VBox topSection = new VBox();
     topSection.getStyleClass().add("top-section");
-
-    Label title = new Label("PAC-MAN");
-    title.getStyleClass().add("game-title");
 
     HBox stats = new HBox();
     stats.getStyleClass().add("stats-box");
@@ -55,13 +53,10 @@ public class GameView implements FXComponent {
     dotsLabel.getStyleClass().add("stat-label");
 
     stats.getChildren().addAll(levelLabel, scoreLabel, livesLabel, dotsLabel);
-
-    topSection.getChildren().addAll(title, stats);
-    root.setTop(topSection);
+    topSection.getChildren().add(stats);
 
     GridPane board = createBoard();
     board.getStyleClass().add("board");
-    root.setCenter(board);
 
     VBox bottomSection = new VBox();
     bottomSection.getStyleClass().add("bottom-section");
@@ -96,20 +91,21 @@ public class GameView implements FXComponent {
     newGameButton.setOnAction(e -> controller.startGame());
 
     bottomSection.getChildren().add(newGameButton);
-    root.setBottom(bottomSection);
+
+    root.getChildren().addAll(topSection, board, bottomSection);
 
     root.setOnKeyPressed(
-        e -> {
-          if (e.getCode() == KeyCode.W || e.getCode() == KeyCode.UP) {
-            controller.moveUp();
-          } else if (e.getCode() == KeyCode.S || e.getCode() == KeyCode.DOWN) {
-            controller.moveDown();
-          } else if (e.getCode() == KeyCode.A || e.getCode() == KeyCode.LEFT) {
-            controller.moveLeft();
-          } else if (e.getCode() == KeyCode.D || e.getCode() == KeyCode.RIGHT) {
-            controller.moveRight();
-          }
-        });
+            e -> {
+              if (e.getCode() == KeyCode.W) {
+                controller.moveUp();
+              } else if (e.getCode() == KeyCode.S) {
+                controller.moveDown();
+              } else if (e.getCode() == KeyCode.A) {
+                controller.moveLeft();
+              } else if (e.getCode() == KeyCode.D) {
+                controller.moveRight();
+              }
+            });
 
     root.setFocusTraversable(true);
     root.requestFocus();

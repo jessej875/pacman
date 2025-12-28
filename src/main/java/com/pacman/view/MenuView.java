@@ -35,7 +35,7 @@ public class MenuView implements FXComponent {
     startButton.getStyleClass().add("start-button");
     startButton.setOnAction(e -> controller.startGame());
 
-    Label instructions = new Label("Use Arrow Keys or WASD to Move");
+    Label instructions = new Label("Use WASD to Move");
     instructions.getStyleClass().add("instructions");
 
     Label goal = new Label("Eat all dots and avoid ghosts!");

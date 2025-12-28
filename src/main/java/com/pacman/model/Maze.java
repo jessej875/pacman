@@ -13,8 +13,8 @@ public class Maze {
   private Random random;
 
   public Maze(int level) {
-    rows = 15;
-    cols = 15;
+    rows = 12;
+    cols = 12;
     grid = new int[rows][cols];
     random = new Random();
     generateRandomMaze(level);

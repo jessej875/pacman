@@ -1,0 +1,16 @@
+/Users/jessejiang/pacman/src/main/java/com/pacman/view/View.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/Main.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/model/Ghost.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/model/Entity.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/model/Maze.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/model/Position.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/view/FXComponent.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/controller/ControllerImpl.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/view/GameView.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/model/Game.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/model/Subject.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/model/Observer.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/controller/Controller.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/model/Pacman.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/view/MenuView.java
+/Users/jessejiang/pacman/src/main/java/com/pacman/view/AppLauncher.java

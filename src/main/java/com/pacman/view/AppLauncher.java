@@ -9,19 +9,19 @@ import javafx.stage.Stage;
 
 public class AppLauncher extends Application {
 
-    @Override
-    public void start(Stage stage) {
-        stage.setTitle("Pac-Man");
+  @Override
+  public void start(Stage stage) {
+    stage.setTitle("Pac-Man");
 
-        Game game = new Game();
-        Controller controller = new ControllerImpl(game);
-        View view = new View(controller, game, stage);
-        game.addObserver(view);
+    Game game = new Game();
+    Controller controller = new ControllerImpl(game);
+    View view = new View(controller, game, stage);
+    game.addObserver(view);
 
-        Scene scene = new Scene(view.render(), 400, 400);
-        scene.getStylesheets().add("pacman.css");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
-    }
+    Scene scene = new Scene(view.render(), 600, 600);
+    scene.getStylesheets().add("pacman.css");
+    stage.setScene(scene);
+    stage.setResizable(false);
+    stage.show();
+  }
 }

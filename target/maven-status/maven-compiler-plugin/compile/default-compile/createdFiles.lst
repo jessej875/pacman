@@ -1,0 +1,16 @@
+com/pacman/view/View.class
+com/pacman/view/MenuView.class
+com/pacman/model/Ghost.class
+com/pacman/model/Pacman.class
+com/pacman/model/Game.class
+com/pacman/view/AppLauncher.class
+com/pacman/Main.class
+com/pacman/controller/ControllerImpl.class
+com/pacman/model/Entity.class
+com/pacman/model/Maze.class
+com/pacman/view/GameView.class
+com/pacman/model/Position.class
+com/pacman/view/FXComponent.class
+com/pacman/model/Observer.class
+com/pacman/model/Subject.class
+com/pacman/controller/Controller.class

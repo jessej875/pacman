@@ -31,7 +31,7 @@ public class View implements FXComponent, Observer {
 
   @Override
   public void update() {
-    Scene scene = new Scene(render(), 400, 400);
+    Scene scene = new Scene(render(), 700, 850);
     scene.getStylesheets().add("pacman.css");
     stage.setScene(scene);
   }
